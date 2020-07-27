@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implementar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <!--Referencia https://www.youtube.com/watch?v=6ln_PFw_dYU&t=695s-->
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">Gary simon</a>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <section class="hero">
+        <div class="inner">
+          <div class="clipper">
+            <h1>Go Musician</h1>
+          </div>
+          <div class="anim-panel">
+            <p>Lorem, ipsum dolor.</p>
+            <a href="#" class="read-btn primary">Get famous</a>
+          </div>
+        </div>
+      </section>
+      <section class="sidebar">
+        <div class="inner">
+          <div class="clipper">
+            <h2>Featured</h2>
+          </div>
+          <div class="anim-panel">
+            <p>More: Lorem ipsum dolor sit amet consectetur.</p>
+            <a href="#" class="read-btn">Read More</a>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe">
+          <div class="inner">
+              <div class="clipper">
+                  <h2>Subscribe</h2>
+              </div>
+              <div class="anim-panel">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo?</p>
+                <input type="text" name="email" placeholder="Email Address">
+                <button class="cta">subscribe Now</button>
+              </div>
+          </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" integrity="sha512-6MCPs9fbSIt6mTpJH2Lbo9Kk71gcgwY85BCqJGP04x+O08W3m/OiKfMiMc4VQKYn+DCtAQwpGumWeD0cACeRsQ==" crossorigin="anonymous"></script>
+   <script>
+       var tl = new TimelineMax();
+       //3 al mismo tiempo
+       //tl.from('section', 2, {opacity:0, scale: .5, ease: Power2.easeOut}, 0.2)
+       //desaparecer los 3
+       // tl.to('section', 2, {opacity:0, scale: .5, ease: Power2.easeOut}, 0.2)
+       //En secuencia
+       tl.staggerFrom('section', 2, {opacity:0, scale: .5, ease: Power2.easeOut}, 1)
+       
+       tl.staggerFrom('h1, h2', .5, {opacity:0, y:-40, ease:Power2.easeInOut}, 0.2)
+   </script>
+  </body>
+</html>

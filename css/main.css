@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header a.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+.wrapper section {
+  padding: 3em;
+}
+.wrapper section h1, .wrapper section h2, .wrapper section .read-btn {
+  text-transform: uppercase;
+  margin: 0;
+}
+.wrapper section h2 {
+  font-size: 1.4rem;
+}
+.wrapper section .read-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/arrow.svg") no-repeat;
+  background-size: 8px;
+  background-position: 0 1px;
+  padding-left: 1em;
+}
+.wrapper section .primary {
+  padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+  background-position: 3em;
+  border: 1px solid gray;
+  display: inline-block;
+  margin-left: -3em;
+}
+.wrapper section .clipper {
+  overflow: hidden;
+}
+.wrapper section.hero {
+  padding-top: 8em;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/hero.jpg");
+  background-size: cover;
+}
+.wrapper section.hero p {
+  width: 70%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.wrapper section.hero h1 {
+  font-size: 2.4rem;
+}
+.wrapper section.sidebar, .wrapper section.subscribe {
+  font-size: 0.9rem;
+  line-height: 1.6em;
+}
+.wrapper section.sidebar {
+  background: #FFEC8B;
+}
+.wrapper section.sidebar .read-btn {
+  margin-top: 2em;
+  display: block;
+  background-position: 0 0.2em;
+}
+.wrapper section.subscribe input {
+  width: calc(100% - 2em);
+  padding: 1em;
+  font-family: "Montserrat";
+  margin-bottom: 1em;
+}
+.wrapper section.subscribe button {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 1em;
+  border: none;
+  font-family: "Montserrat";
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    background: none;
+  }
+
+  .wrapper {
+    grid-template-columns: 70% auto;
+    grid-template-rows: 60% auto;
+    grid-template-areas: "hero featured" "hero subscribe";
+    height: 100vh;
+  }
+
+  section.hero {
+    grid-area: hero;
+  }
+
+  section {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
